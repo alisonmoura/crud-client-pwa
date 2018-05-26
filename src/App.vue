@@ -11,9 +11,9 @@
     >
       <v-list>
         <v-list-tile
-          value="true"
           v-for="(item, i) in items"
           :key="i"
+          :to="item.url"
         >
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
@@ -50,11 +50,13 @@ export default {
       items: [
         {
           icon: "home",
-          title: "Início"
+          title: "Início",
+          url: "/"
         },
         {
           icon: "person",
-          title: "Cliente"
+          title: "Cliente",
+          url: "/client"
         }
       ],
       miniVariant: false,
